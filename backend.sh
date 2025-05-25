@@ -58,7 +58,7 @@ dnf install mysql -y &>>log_file
 status_check
 
 echo -e "${color} Load Schema \e[0m"
-mysql -h mysql-dev.devopsb24.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>log_file
+mysql -h mysql-dev.devopsb24.online -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>log_file
 status_check
 
 echo -e "${color} Starting Backend Service \e[0m"
