@@ -23,6 +23,6 @@ systemctl enable mysqld &>>log_file
 systemctl start mysqld &>>log_file
 status_check
 
-echo -e "${color} Disable NodeJs Default Version \e[0m"
+echo -e "${color} Set Mysql Password \e[0m"
 mysql_secure_installation --set-root-pass ${MYSQL_ROOT_PASSWORD} &>>log_file
 status_check
